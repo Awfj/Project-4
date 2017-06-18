@@ -1,0 +1,443 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.cf:before, .cf:after {
+  content: ' ';
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  /* height: 100%;
+	width: 100%; */ }
+
+.wrapper {
+  width: 1196px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+header .logo, footer .logo {
+  float: left; }
+
+form input {
+  padding: 1em 1.5em;
+  border-radius: .3em;
+  outline: none;
+  border: none; }
+
+form input[type="submit"] {
+  text-transform: uppercase;
+  background-color: #77c344;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 2em;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  form input[type="submit"]:hover {
+    background: #ffce54; }
+
+form input::-webkit-input-placeholder {
+  color: #79818d; }
+
+form input::-moz-placeholder {
+  color: #79818d; }
+
+form input:-ms-input-placeholder {
+  color: #79818d; }
+
+form input::placeholder {
+  color: #79818d; }
+
+#main_nav, nav {
+  float: right;
+  margin: .45em 0; }
+  #main_nav a, nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4c5767;
+    font-size: 1.1em;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    #main_nav a:not(:last-child), nav a:not(:last-child) {
+      margin-right: 1.5em; }
+    #main_nav a:hover, nav a:hover {
+      color: #5fa3d2; }
+
+header {
+  padding: 1.5em 0; }
+  header .menu {
+    display: none; }
+  header #main_nav {
+    float: right;
+    margin: .45em 0; }
+    header #main_nav a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #79818d;
+      font-size: 1.1em;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      header #main_nav a:not(:last-child) {
+        margin-right: 1.5em; }
+      header #main_nav a:hover {
+        color: #5fa3d2; }
+
+#banner {
+  background-color: #5fa3d2;
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: right 10px;
+  color: #fff; }
+  #banner .wrapper {
+    background-image: url(../images/banner_clouds.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  #banner .content {
+    width: 570px;
+    max-width: 100%;
+    padding: 9em 0; }
+    #banner .content h1 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 3em;
+      margin: 0 0 .3em 0;
+      line-height: 1.3em; }
+    #banner .content h3 {
+      font-weight: 300;
+      font-style: italic;
+      margin: 0 0 2em 0;
+      font-size: 1.5em; }
+    #banner .content p {
+      font-weight: 500;
+      margin: 0 0 1.5em 0; }
+      #banner .content p span {
+        text-transform: uppercase;
+        padding: .4em .6em;
+        background-color: #ffce54;
+        border-radius: .4em; }
+    #banner .content form {
+      max-width: 100%; }
+      #banner .content form input[type="text"] {
+        width: 65%; }
+      #banner .content form input[type="submit"] {
+        width: 25%; }
+
+#clients {
+  background-color: #f8f8f8;
+  padding: 2em 0;
+  text-align: center; }
+  #clients img {
+    vertical-align: middle;
+    width: 15%;
+    max-width: 125px; }
+    #clients img:not(:last-child) {
+      margin-right: 5%; }
+
+#features {
+  padding: 6em 0;
+  background-image: url(../images/features/macbook.png);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: right 225px;
+  vertical-align: middle; }
+  #features h2 {
+    text-transform: uppercase;
+    color: #4c5767;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 0 2em; }
+  #features .feature {
+    width: 40%;
+    max-width: 50%; }
+    #features .feature:not(:last-child) {
+      margin-bottom: 2em; }
+    #features .feature img {
+      vertical-align: middle;
+      margin-right: 1em; }
+    #features .feature h3 {
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0;
+      color: #4c5767;
+      font-weight: 400;
+      font-size: 1.4em; }
+    #features .feature p {
+      margin: .6em 0 0;
+      color: #79818d;
+      font-weight: 400;
+      line-height: 1.3em; }
+
+#differences {
+  background-color: #f8f8f8;
+  padding: 6em 0;
+  background-image: url(../images/differences.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: right 100%; }
+  #differences h2 {
+    text-transform: uppercase;
+    color: #4c5767;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 0 1em; }
+  #differences .slideshow-container {
+    position: relative; }
+    #differences .slideshow-container .mySlides {
+      width: 55%;
+      max-width: 100%;
+      display: none; }
+      #differences .slideshow-container .mySlides img {
+        vertical-align: middle;
+        margin-right: 1em; }
+      #differences .slideshow-container .mySlides h3 {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0;
+        color: #4c5767;
+        font-weight: 400;
+        font-size: 1.4em; }
+      #differences .slideshow-container .mySlides p {
+        margin: 1.5em 0 2em;
+        color: #79818d;
+        font-weight: 400;
+        line-height: 1.5em; }
+    #differences .slideshow-container .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+  #differences .dots {
+    text-align: center; }
+    #differences .dots span {
+      cursor: pointer;
+      border-radius: 50%;
+      color: #77c344;
+      font-size: 2em;
+      margin: 0 .2em;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+    #differences .dots .active, #differences .dots span:hover {
+      color: #5fa3d2; }
+
+#signup {
+  padding: 6em 0;
+  background-color: #fff;
+  border-bottom: 1px solid #79818d; }
+  #signup h2 {
+    text-transform: uppercase;
+    color: #4c5767;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 0 .5em; }
+  #signup p {
+    margin: 0 0 3em;
+    color: #79818d;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2em; }
+  #signup form {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    #signup form input[type="text"] {
+      border: 1px solid #79818d;
+      width: 70%;
+      background-image: url(../images/envelope.png);
+      background-repeat: no-repeat;
+      background-position: 15px 13px;
+      padding-left: 3.6em; }
+    #signup form input[type="submit"] {
+      width: 20%; }
+
+footer {
+  background-color: #f8f8f8;
+  padding: 1.5em 0; }
+  footer .logo {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .6; }
+  footer nav a {
+    font-size: 1.1em; }
+    footer nav a:not(:last-child) {
+      margin-right: .9em; }
+  footer nav a:nth-of-type(6):before {
+    content: '';
+    border-left: 1px solid #79818d; }
+  footer nav .fa {
+    vertical-align: middle;
+    font-size: 1.3em; }
+  footer nav .fa-twitter {
+    color: #4cbcf6;
+    margin-left: .7em; }
+  footer nav .fa-facebook {
+    color: #4a6daa; }
+  footer nav .fa-google-plus {
+    color: #e74c40; }
+
+@media screen and (max-width: 1200px) {
+  #banner {
+    background-size: 450px;
+    background-position: 99% 100px; }
+  #features {
+    background-position: right 55%;
+    background-size: 45%; }
+    #features .feature {
+      width: 50%; }
+  #differences {
+    background-position: right 35%; } }
+
+@media screen and (max-width: 991px) {
+  #banner {
+    background-image: none; }
+    #banner .wrapper {
+      background-image: none; }
+    #banner .content {
+      width: 90%;
+      margin: 0 auto; }
+      #banner .content h1, #banner .content h3 {
+        text-align: center; }
+  #features {
+    background-image: none; }
+    #features h2 {
+      margin: 0 0 1em; }
+    #features .feature {
+      margin: 0 auto;
+      width: 65%;
+      max-width: 100%; }
+  #differences {
+    background-image: none; }
+    #differences .slideshow-container .mySlides {
+      width: 80%;
+      margin: 0 auto; }
+  footer .logo {
+    display: none; }
+  footer nav {
+    text-align: center;
+    float: none; } }
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.2em !important; }
+  header .menu {
+    display: block;
+    float: right;
+    border: none;
+    outline: none;
+    padding: .5em 1em;
+    background-color: #5fa3d2;
+    color: #fff;
+    cursor: pointer; }
+    header .menu:hover {
+      color: #ffce54; }
+  header #main_nav {
+    display: none; }
+  header #main_nav.active_menu {
+    display: block;
+    width: 100%;
+    margin-top: 1.5em; }
+    header #main_nav.active_menu a {
+      display: block;
+      font-size: 1.2em; }
+      header #main_nav.active_menu a:not(:last-child) {
+        border-bottom: 1px solid #79818d; }
+  #banner .content {
+    width: 100%; }
+    #banner .content h1 {
+      font-size: 2.5em; }
+    #banner .content h3 {
+      font-size: 1.3em; }
+    #banner .content h1, #banner .content h3 {
+      text-align: center; }
+  #clients img {
+    width: 17%; }
+    #clients img:not(:last-child) {
+      margin-right: 2%; }
+  #features {
+    background-image: none; }
+    #features .feature {
+      margin: 0 auto;
+      width: 91%;
+      max-width: 100%; }
+      #features .feature img {
+        width: 40px; }
+      #features .feature h3 {
+        font-size: 1.2em; }
+      #features .feature p {
+        font-size: .95em; }
+  #differences .slideshow-container .mySlides {
+    width: 91%; }
+  #signup form input[type="text"] {
+    width: 60%; }
+  #signup form input[type="submit"] {
+    width: 125px;
+    margin-left: 1em; }
+  footer .logo {
+    display: inline-block; }
+  footer nav {
+    float: right; }
+    footer nav a:nth-of-type(-n+5) {
+      display: none; }
+    footer nav a:nth-of-type(6):before {
+      content: none; } }
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 2em !important; }
+  #features, #differences, #signup {
+    padding: 3em 0; }
+  #banner .content {
+    padding: 5em 0; }
+    #banner .content form input[type="text"],
+    #banner .content form input[type="submit"] {
+      width: 100%;
+      margin: 0; }
+  #clients {
+    display: none; }
+  #features .feature img {
+    display: none; }
+  #differences .slideshow-container .mySlides img {
+    display: none; }
+  #differences .slideshow-container .mySlides h3 {
+    font-size: 1.3em; }
+  #differences .slideshow-container .mySlides p {
+    font-size: .95em; }
+  #signup form input[type="text"],
+  #signup form input[type="submit"] {
+    width: 100%;
+    margin: 0; }
+  footer {
+    padding: 1em 0; }
+    footer .logo img {
+      width: 150px;
+      padding: .25em 0; } }
