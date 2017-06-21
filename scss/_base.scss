@@ -1,0 +1,83 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+* {
+	margin: 0;
+	border: 0;
+}
+.wrapper {
+	width: 1196px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+a, h1, h2 {
+	text-transform: uppercase;
+}
+a, h2, h3 {
+	color: $dark_blue;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, p {
+	margin: 0;
+}
+h2 {
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: 500;
+}
+h3 {
+	font-size: 1.45em;
+	font-weight: 400;
+}
+p {
+	color: $grey;
+}
+#banner, #banner .wrapper, #features, #diffirences, input[type="text"] {
+	background-repeat: no-repeat;
+}
+header, footer{
+	.logo {
+		float: left;
+	}
+}
+
+
+form {
+	input {
+		padding: 1em 1.5em;
+		border-radius: .3em;
+		border: none;
+	}
+	input[type="submit"] {
+		text-transform: uppercase;
+		background-color: $green;
+		color: $white;
+		font-weight: 700;
+		margin-left: 2em;
+		cursor: pointer;
+		transition: all .3s ease-in-out;
+		&:hover {
+			background: rgba($green, .8);
+		}
+	}
+	input::placeholder {
+		color: $grey;
+	}
+}
+
+#main_nav, nav {
+	float: right;
+	margin: .45em 0;
+	a {
+		font-size: 1.1em;
+		transition: all .3s ease-in-out;
+		&:not(:last-child) {
+			margin-right: 1.5em;
+		}
+		&:hover {
+			color: $blue;
+		}
+	}
+}

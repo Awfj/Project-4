@@ -1,92 +1,7 @@
-html {
-	box-sizing: border-box;
-}
+@import 'reset';
+@import 'variables';
+@import 'base';
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-.cf:before, .cf:after {
-	content: ' ';
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-//---------------------------------------------
-
-body {
-	font-family: 'Ubuntu', sans-serif;
-	/* height: 100%;
-	width: 100%; */
-}
-
-$white: #fff;
-$grey: #79818d;
-$light_grey: #f8f8f8;
-$light_grey_sec: #d1d1d1;
-$blue: #5fa3d2;
-$dark_blue: #4c5767;
-$orange: #ffce54;
-$green: #77c344;
-
-.wrapper {
-	width: 1196px;
-	max-width: 90%;
-	margin: 0 auto;
-}
-
-header, footer{
-	.logo {
-		float: left;
-	}
-}
-
-form {
-	input {
-		padding: 1em 1.5em;
-		border-radius: .3em;
-		outline: none;
-		border: none;
-	}
-	input[type="submit"] {
-		text-transform: uppercase;
-		background-color: $green;
-		color: $white;
-		font-weight: 700;
-		margin-left: 2em;
-		cursor: pointer;
-		transition: all .3s ease-in-out;
-		&:hover {
-			background: $orange;
-		}
-	}
-	input::placeholder {
-		color: $grey;
-	}
-}
-
-#main_nav, nav {
-	float: right;
-	margin: .45em 0;
-	a {
-		text-transform: uppercase;
-		text-decoration: none;
-		color: $dark_blue;
-		font-size: 1.1em;
-		transition: all .3s ease-in-out;
-		&:not(:last-child) {
-			margin-right: 1.5em;
-		}
-		&:hover {
-			color: $blue;
-		}
-	}
-}
-
-//--------HEADER-------------------------------------
 header {
 	padding: 1.5em 0;
 	.menu {
@@ -96,9 +11,6 @@ header {
 		float: right;
 		margin: .45em 0;
 		a {
-			text-transform: uppercase;
-			text-decoration: none;
-			color: $grey;
 			font-size: 1.1em;
 			transition: all .3s ease-in-out;
 			&:not(:last-child) {
@@ -111,19 +23,18 @@ header {
 	}
 }
 
-//--------BANNER-------------------------------------
 #banner {
+	@include background(
+		url(../images/banner.png), 
+		550px,
+		right 10px);
 	background-color: $blue;
-	background-image: url(../images/banner.png);
-	background-repeat: no-repeat;
-	background-size: 550px;
-	background-position: right 10px;
 	color: $white;
 	.wrapper {
-		background-image: url(../images/banner_clouds.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
+		@include background(
+			url(../images/banner_clouds.png),
+			contain,
+			center);
 	}
 	.content {
 		width: 570px;
@@ -131,7 +42,6 @@ header {
 		padding: 9em 0;
 		h1 {
 			font-weight: 700;
-			text-transform: uppercase;
 			font-size: 3em;
 			margin: 0 0 .3em 0;
 			line-height: 1.3em;
@@ -141,10 +51,12 @@ header {
 			font-style: italic;
 			margin: 0 0 2em 0;
 			font-size: 1.5em;
+			color: $white;
 		}
 		p {
 			font-weight: 500;
 			margin: 0 0 1.5em 0;
+			color: $white;
 			span {
 				text-transform: uppercase;
 				padding: .4em .6em;
@@ -164,7 +76,6 @@ header {
 	}
 }
 
-//--------CLIENTS-------------------------------------
 #clients {
 	background-color: $light_grey;
 	padding: 2em 0;
@@ -179,20 +90,14 @@ header {
 	}
 }
 
-//--------FEATURES-------------------------------------
 #features {
+	@include background(
+		url(../images/features/macbook.png),
+		55%,
+		right 225px);
 	padding: 6em 0;
-	background-image: url(../images/features/macbook.png);
-	background-repeat: no-repeat;
-	background-size: 55%;
-	background-position: right 225px;
 	vertical-align: middle;
 	h2 {
-		text-transform: uppercase;
-		color: $dark_blue;
-		text-align: center;
-		font-size: 2.5em;
-		font-weight: 500;
 		margin: 0 0 2em;
 	}
 	.feature {
@@ -208,34 +113,23 @@ header {
 		h3 {
 			vertical-align: middle;
 			display: inline-block;
-			margin: 0;
-			color: $dark_blue;
-			font-weight: 400;
-			font-size: 1.4em;
 		}
 		p {
 			margin: .6em 0 0;
-			color: $grey;
 			font-weight: 400;
 			line-height: 1.3em;
 		}
 	}
 }
 
-//--------DIFFERENCES-------------------------------------
 #differences {
+	@include background(
+		url(../images/differences.png),
+		80%,
+		right 100%);
 	background-color: $light_grey;
 	padding: 6em 0;
-	background-image: url(../images/differences.png);
-	background-repeat: no-repeat;
-	background-size: 80%;
-	background-position: right 100%;
 	h2 {
-		text-transform: uppercase;
-		color: $dark_blue;
-		text-align: center;
-		font-size: 2.5em;
-		font-weight: 500;
 		margin: 0 0 1em;
 	}
 	.slideshow-container {
@@ -252,13 +146,9 @@ header {
 				vertical-align: middle;
 				display: inline-block;
 				margin: 0;
-				color: $dark_blue;
-				font-weight: 400;
-				font-size: 1.4em;
 			}
 			p {
 				margin: 1.5em 0 2em;
-				color: $grey;
 				font-weight: 400;
 				line-height: 1.5em;
 			}
@@ -291,28 +181,20 @@ header {
 			transition: all .2s ease-in-out;
 		}
 		.active, span:hover {
-			// background-color: $blue;
 			color: $blue;
 		}
 	}
 }
 
-//--------SIGNUP-------------------------------------
 #signup {
 	padding: 6em 0;
 	background-color: $white;
 	border-bottom: 1px solid $grey;
 	h2 {
-		text-transform: uppercase;
-		color: $dark_blue;
-		text-align: center;
-		font-size: 2.5em;
-		font-weight: 500;
 		margin: 0 0 .5em;
 	}
 	p {
 		margin: 0 0 3em;
-		color: $grey;
 		text-align: center;
 		font-weight: 300;
 		font-style: italic;
@@ -324,11 +206,12 @@ header {
 		margin: 0 auto;
 		text-align: center;
 		input[type="text"] {
-			border: 1px solid $grey;
+			@include background(
+				url(../images/envelope.png),
+				none,
+				15px 13px);
 			width: 70%;
-			background-image: url(../images/envelope.png);
-			background-repeat: no-repeat;
-			background-position: 15px 13px;
+			border: 1px solid $grey;
 			padding-left: 3.6em;
 		}
 		input[type="submit"] {
@@ -337,7 +220,6 @@ header {
 	}
 }
 
-//--------FOOTER-------------------------------------
 footer {
 	background-color: $light_grey;
 	padding: 1.5em 0;
@@ -373,231 +255,4 @@ footer {
 	}
 }
 
-
-//--------RESPONSIVE-------------------------------------
-@media screen and (max-width: 1200px) {
-	#banner {
-		background-size: 450px;
-		background-position: 99% 100px;
-	}
-	#features {
-		background-position: right 55%;
-		background-size: 45%;
-		.feature {
-			width: 50%;
-		}
-	}
-	#differences {
-		background-position: right 35%;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	#banner {
-		background-image: none;
-		.wrapper {
-			background-image: none;
-		}
-		.content {
-			width: 90%;
-			margin: 0 auto;
-			h1, h3 {
-				text-align: center;
-			}
-		}
-	}
-	#features {
-		background-image: none;
-		h2 {
-			margin: 0 0 1em;
-		}
-		.feature {
-			margin: 0 auto;
-			width: 65%;
-			max-width: 100%;
-		}
-	}
-	#differences {
-		background-image: none;
-		.slideshow-container {
-			.mySlides {
-				width: 80%;
-				margin: 0 auto;
-			}
-		}
-	}
-	footer {
-		.logo {
-			display: none;
-		}
-		nav {
-			text-align: center;
-			float: none;
-		}
-	}
-}
-
-@media screen and (max-width: 768px) {
-	h2 {
-		font-size: 2.2em !important;
-	}
-	header {
-		.menu {
-			display: block;
-			float: right;
-			border: none;
-			outline: none;
-			padding: .5em 1em;
-			background-color: $blue;
-			color: $white;
-			cursor: pointer;
-			&:hover {
-				color: $orange;
-			}
-		}
-		#main_nav {
-			display: none;
-		}
-		#main_nav.active_menu {
-			display: block;
-			width: 100%;
-			margin-top: 1.5em;
-			a {
-				display: block;
-				font-size: 1.2em;
-				&:not(:last-child) {
-					border-bottom: 1px solid $grey;
-				}
-			}
-		}
-	}
-	#banner {
-		.content {
-			h1 {
-				font-size: 2.5em;
-			}
-			h3 {
-				font-size: 1.3em;
-			}
-			width: 100%;
-			h1, h3 {
-				text-align: center;
-			}
-		}
-	}
-	#clients {
-		img {
-			width: 17%;
-			&:not(:last-child) {
-				margin-right: 2%;
-			}
-		}
-	}
-	#features {
-		background-image: none;
-		.feature {
-			margin: 0 auto;
-			width: 91%;
-			max-width: 100%;
-			img {
-				width: 40px;
-			}
-			h3 {
-				font-size: 1.2em;
-			}
-			p {
-				font-size: .95em;
-			}
-		}
-	}
-	#differences {
-		.slideshow-container {
-			.mySlides {
-				width: 91%;
-			}
-		}
-	}
-	#signup {
-		form {
-			input[type="text"] {
-				width: 60%;
-			}
-			input[type="submit"] {
-				width: 125px;
-				margin-left: 1em;
-			}
-		}
-	}
-	footer {
-		.logo {
-			display: inline-block;
-		}
-		nav {
-			float: right;
-			a:nth-of-type(-n+5) {
-				display: none;
-			}
-			a:nth-of-type(6):before {
-				content: none;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 480px) {
-	h2 {
-		font-size: 2em !important;
-	}
-	#features, #differences, #signup {
-		padding: 3em 0;
-	}
-	#banner {
-		.content {
-			padding: 5em 0;
-			form input[type="text"], 
-			form input[type="submit"]{
-				width: 100%;
-				margin: 0;
-			}
-		}
-	}
-	#clients {
-		display: none;
-	}
-	#features {
-		.feature {
-			img {
-				display: none;
-			}
-		}
-	}
-	#differences {
-		.slideshow-container {
-			.mySlides {
-				img {
-					display: none;
-				}
-				h3 {
-					font-size: 1.3em;
-				}
-				p {
-					font-size: .95em;
-				}
-			}
-		}
-	}
-	#signup {
-		form input[type="text"], 
-		form input[type="submit"]{
-			width: 100%;
-			margin: 0;
-		}
-	}
-	footer {
-		padding: 1em 0;
-		.logo img{
-			width: 150px;
-			padding: .25em 0;
-		}
-	}
-}
+@import 'responsive';

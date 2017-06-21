@@ -1,0 +1,226 @@
+@media screen and (max-width: 1200px) {
+	#banner {
+		background-size: 450px;
+		background-position: 99% 100px;
+	}
+	#features {
+		background-position: right 55%;
+		background-size: 45%;
+		.feature {
+			width: 50%;
+		}
+	}
+	#differences {
+		background-position: right 35%;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#banner {
+		background-image: none;
+		.wrapper {
+			background-image: none;
+		}
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			h1, h3 {
+				text-align: center;
+			}
+		}
+	}
+	#features {
+		background-image: none;
+		h2 {
+			margin: 0 0 1em;
+		}
+		.feature {
+			margin: 0 auto;
+			width: 65%;
+			max-width: 100%;
+		}
+	}
+	#differences {
+		background-image: none;
+		.slideshow-container {
+			.mySlides {
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+	footer {
+		.logo {
+			display: none;
+		}
+		nav {
+			text-align: center;
+			float: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 2.2em !important;
+	}
+	header {
+		.menu {
+			display: block;
+			float: right;
+			border: none;
+			outline: none;
+			padding: .5em 1em;
+			background-color: $blue;
+			color: $white;
+			cursor: pointer;
+			&:hover {
+				color: $orange;
+			}
+		}
+		#main_nav {
+			display: none;
+		}
+		#main_nav.active_menu {
+			display: block;
+			width: 100%;
+			margin-top: 1.5em;
+			a {
+				display: block;
+				font-size: 1.2em;
+				&:not(:last-child) {
+					border-bottom: 1px solid $grey;
+				}
+			}
+		}
+	}
+	#banner {
+		.content {
+			h1 {
+				font-size: 2.5em;
+			}
+			h3 {
+				font-size: 1.3em;
+			}
+			width: 100%;
+			h1, h3 {
+				text-align: center;
+			}
+		}
+	}
+	#clients {
+		img {
+			width: 17%;
+			&:not(:last-child) {
+				margin-right: 2%;
+			}
+		}
+	}
+	#features {
+		background-image: none;
+		.feature {
+			margin: 0 auto;
+			width: 91%;
+			max-width: 100%;
+			img {
+				width: 40px;
+			}
+			h3 {
+				font-size: 1.2em;
+			}
+			p {
+				font-size: .95em;
+			}
+		}
+	}
+	#differences {
+		.slideshow-container {
+			.mySlides {
+				width: 91%;
+			}
+		}
+	}
+	#signup {
+		form {
+			input[type="text"] {
+				width: 60%;
+			}
+			input[type="submit"] {
+				width: 125px;
+				margin-left: 1em;
+			}
+		}
+	}
+	footer {
+		.logo {
+			display: inline-block;
+		}
+		nav {
+			float: right;
+			a:nth-of-type(-n+5) {
+				display: none;
+			}
+			a:nth-of-type(6):before {
+				content: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h2 {
+		font-size: 2em !important;
+	}
+	#features, #differences, #signup {
+		padding: 3em 0;
+	}
+	#banner {
+		.content {
+			padding: 5em 0;
+			form input[type="text"], 
+			form input[type="submit"]{
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	#clients {
+		display: none;
+	}
+	#features {
+		.feature {
+			img {
+				display: none;
+			}
+		}
+	}
+	#differences {
+		.slideshow-container {
+			.mySlides {
+				img {
+					display: none;
+				}
+				h3 {
+					font-size: 1.3em;
+				}
+				p {
+					font-size: .95em;
+				}
+			}
+		}
+	}
+	#signup {
+		form input[type="text"], 
+		form input[type="submit"]{
+			width: 100%;
+			margin: 0;
+		}
+	}
+	footer {
+		padding: 1em 0;
+		.logo img{
+			width: 150px;
+			padding: .25em 0;
+		}
+	}
+}

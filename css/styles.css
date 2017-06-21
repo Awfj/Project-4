@@ -14,14 +14,43 @@ html {
   clear: both; }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  /* height: 100%;
-	width: 100%; */ }
+  font-family: 'Ubuntu', sans-serif; }
+
+* {
+  margin: 0;
+  border: 0; }
 
 .wrapper {
   width: 1196px;
   max-width: 90%;
   margin: 0 auto; }
+
+a, h1, h2 {
+  text-transform: uppercase; }
+
+a, h2, h3 {
+  color: #4c5767; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, p {
+  margin: 0; }
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 500; }
+
+h3 {
+  font-size: 1.45em;
+  font-weight: 400; }
+
+p {
+  color: #79818d; }
+
+#banner, #banner .wrapper, #features, #diffirences, input[type="text"] {
+  background-repeat: no-repeat; }
 
 header .logo, footer .logo {
   float: left; }
@@ -29,7 +58,6 @@ header .logo, footer .logo {
 form input {
   padding: 1em 1.5em;
   border-radius: .3em;
-  outline: none;
   border: none; }
 
 form input[type="submit"] {
@@ -43,7 +71,7 @@ form input[type="submit"] {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
   form input[type="submit"]:hover {
-    background: #ffce54; }
+    background: rgba(119, 195, 68, 0.8); }
 
 form input::-webkit-input-placeholder {
   color: #79818d; }
@@ -61,9 +89,6 @@ form input::placeholder {
   float: right;
   margin: .45em 0; }
   #main_nav a, nav a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #4c5767;
     font-size: 1.1em;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
@@ -81,9 +106,6 @@ header {
     float: right;
     margin: .45em 0; }
     header #main_nav a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #79818d;
       font-size: 1.1em;
       -webkit-transition: all .3s ease-in-out;
       -o-transition: all .3s ease-in-out;
@@ -94,15 +116,13 @@ header {
         color: #5fa3d2; }
 
 #banner {
-  background-color: #5fa3d2;
   background-image: url(../images/banner.png);
-  background-repeat: no-repeat;
   background-size: 550px;
   background-position: right 10px;
+  background-color: #5fa3d2;
   color: #fff; }
   #banner .wrapper {
     background-image: url(../images/banner_clouds.png);
-    background-repeat: no-repeat;
     background-size: contain;
     background-position: center; }
   #banner .content {
@@ -111,7 +131,6 @@ header {
     padding: 9em 0; }
     #banner .content h1 {
       font-weight: 700;
-      text-transform: uppercase;
       font-size: 3em;
       margin: 0 0 .3em 0;
       line-height: 1.3em; }
@@ -119,10 +138,12 @@ header {
       font-weight: 300;
       font-style: italic;
       margin: 0 0 2em 0;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      color: #fff; }
     #banner .content p {
       font-weight: 500;
-      margin: 0 0 1.5em 0; }
+      margin: 0 0 1.5em 0;
+      color: #fff; }
       #banner .content p span {
         text-transform: uppercase;
         padding: .4em .6em;
@@ -147,18 +168,12 @@ header {
       margin-right: 5%; }
 
 #features {
-  padding: 6em 0;
   background-image: url(../images/features/macbook.png);
-  background-repeat: no-repeat;
   background-size: 55%;
   background-position: right 225px;
+  padding: 6em 0;
   vertical-align: middle; }
   #features h2 {
-    text-transform: uppercase;
-    color: #4c5767;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 500;
     margin: 0 0 2em; }
   #features .feature {
     width: 40%;
@@ -170,30 +185,19 @@ header {
       margin-right: 1em; }
     #features .feature h3 {
       vertical-align: middle;
-      display: inline-block;
-      margin: 0;
-      color: #4c5767;
-      font-weight: 400;
-      font-size: 1.4em; }
+      display: inline-block; }
     #features .feature p {
       margin: .6em 0 0;
-      color: #79818d;
       font-weight: 400;
       line-height: 1.3em; }
 
 #differences {
-  background-color: #f8f8f8;
-  padding: 6em 0;
   background-image: url(../images/differences.png);
-  background-repeat: no-repeat;
   background-size: 80%;
-  background-position: right 100%; }
+  background-position: right 100%;
+  background-color: #f8f8f8;
+  padding: 6em 0; }
   #differences h2 {
-    text-transform: uppercase;
-    color: #4c5767;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 500;
     margin: 0 0 1em; }
   #differences .slideshow-container {
     position: relative; }
@@ -207,13 +211,9 @@ header {
       #differences .slideshow-container .mySlides h3 {
         vertical-align: middle;
         display: inline-block;
-        margin: 0;
-        color: #4c5767;
-        font-weight: 400;
-        font-size: 1.4em; }
+        margin: 0; }
       #differences .slideshow-container .mySlides p {
         margin: 1.5em 0 2em;
-        color: #79818d;
         font-weight: 400;
         line-height: 1.5em; }
     #differences .slideshow-container .fade {
@@ -252,15 +252,9 @@ header {
   background-color: #fff;
   border-bottom: 1px solid #79818d; }
   #signup h2 {
-    text-transform: uppercase;
-    color: #4c5767;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 500;
     margin: 0 0 .5em; }
   #signup p {
     margin: 0 0 3em;
-    color: #79818d;
     text-align: center;
     font-weight: 300;
     font-style: italic;
@@ -271,11 +265,11 @@ header {
     margin: 0 auto;
     text-align: center; }
     #signup form input[type="text"] {
-      border: 1px solid #79818d;
-      width: 70%;
       background-image: url(../images/envelope.png);
-      background-repeat: no-repeat;
+      background-size: none;
       background-position: 15px 13px;
+      width: 70%;
+      border: 1px solid #79818d;
       padding-left: 3.6em; }
     #signup form input[type="submit"] {
       width: 20%; }

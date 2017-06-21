@@ -1,0 +1,14 @@
+$white: #fff;
+$grey: #79818d;
+$light_grey: #f8f8f8;
+$light_grey_sec: #d1d1d1;
+$blue: #5fa3d2;
+$dark_blue: #4c5767;
+$orange: #ffce54;
+$green: #77c344;
+
+@mixin background($image, $size, $position){
+	background-image: $image;
+	background-size: $size;
+	background-position: $position;
+}
