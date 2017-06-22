@@ -13,12 +13,12 @@ html {
 .cf:after {
   clear: both; }
 
-body {
-  font-family: 'Ubuntu', sans-serif; }
-
 * {
   margin: 0;
   border: 0; }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
 
 .wrapper {
   width: 1196px;
@@ -34,9 +34,6 @@ a, h2, h3 {
 a {
   text-decoration: none; }
 
-h1, h2, h3, p {
-  margin: 0; }
-
 h2 {
   text-align: center;
   font-size: 2.5em;
@@ -46,14 +43,23 @@ h3 {
   font-size: 1.45em;
   font-weight: 400; }
 
-p {
-  color: #79818d; }
+#features p, #differences p, #signup p {
+  color: #79818d;
+  font-weight: 400;
+  line-height: 1.5em; }
 
-#banner, #banner .wrapper, #features, #diffirences, input[type="text"] {
+#banner, #banner .wrapper, #features,
+#differences, input[type="text"] {
   background-repeat: no-repeat; }
 
 header .logo, footer .logo {
   float: left; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #4c5767; }
 
 form input {
   padding: 1em 1.5em;
@@ -99,7 +105,8 @@ form input::placeholder {
       color: #5fa3d2; }
 
 header {
-  padding: 1.5em 0; }
+  padding: 1.5em 0;
+  background-color: #fff; }
   header .menu {
     display: none; }
   header #main_nav {
@@ -134,17 +141,18 @@ header {
       font-size: 3em;
       margin: 0 0 .3em 0;
       line-height: 1.3em; }
-    #banner .content h3 {
+    #banner .content .subtitle {
       font-weight: 300;
       font-style: italic;
       margin: 0 0 2em 0;
       font-size: 1.5em;
       color: #fff; }
-    #banner .content p {
+    #banner .content #for_free {
+      font-size: 1em;
       font-weight: 500;
       margin: 0 0 1.5em 0;
       color: #fff; }
-      #banner .content p span {
+      #banner .content #for_free span {
         text-transform: uppercase;
         padding: .4em .6em;
         background-color: #ffce54;
@@ -187,9 +195,7 @@ header {
       vertical-align: middle;
       display: inline-block; }
     #features .feature p {
-      margin: .6em 0 0;
-      font-weight: 400;
-      line-height: 1.3em; }
+      margin: .6em 0 0; }
 
 #differences {
   background-image: url(../images/differences.png);
@@ -213,9 +219,7 @@ header {
         display: inline-block;
         margin: 0; }
       #differences .slideshow-container .mySlides p {
-        margin: 1.5em 0 2em;
-        font-weight: 400;
-        line-height: 1.5em; }
+        margin: 1.5em 0 2em; }
     #differences .slideshow-container .fade {
       -webkit-animation-name: fade;
       -webkit-animation-duration: 1.5s;
@@ -254,7 +258,7 @@ header {
   #signup h2 {
     margin: 0 0 .5em; }
   #signup p {
-    margin: 0 0 3em;
+    margin: 0 0 1.5em;
     text-align: center;
     font-weight: 300;
     font-style: italic;
@@ -300,6 +304,8 @@ footer {
     color: #e74c40; }
 
 @media screen and (max-width: 1200px) {
+  #features, #differences, #signup {
+    padding: 4.5em 0; }
   #banner {
     background-size: 450px;
     background-position: 99% 100px; }
@@ -319,7 +325,7 @@ footer {
     #banner .content {
       width: 90%;
       margin: 0 auto; }
-      #banner .content h1, #banner .content h3 {
+      #banner .content h1, #banner .content .subtitle {
         text-align: center; }
   #features {
     background-image: none; }
@@ -341,6 +347,8 @@ footer {
     float: none; } }
 
 @media screen and (max-width: 768px) {
+  #features, #differences, #signup {
+    padding: 3.5em 0; }
   h2 {
     font-size: 2.2em !important; }
   header .menu {
@@ -369,10 +377,8 @@ footer {
     width: 100%; }
     #banner .content h1 {
       font-size: 2.5em; }
-    #banner .content h3 {
+    #banner .content .subtitle {
       font-size: 1.3em; }
-    #banner .content h1, #banner .content h3 {
-      text-align: center; }
   #clients img {
     width: 17%; }
     #clients img:not(:last-child) {

@@ -1,4 +1,7 @@
 @media screen and (max-width: 1200px) {
+	#features, #differences, #signup {
+		padding: 4.5em 0;
+	}
 	#banner {
 		background-size: 450px;
 		background-position: 99% 100px;
@@ -24,7 +27,7 @@
 		.content {
 			width: 90%;
 			margin: 0 auto;
-			h1, h3 {
+			h1, .subtitle {
 				text-align: center;
 			}
 		}
@@ -61,6 +64,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	#features, #differences, #signup {
+		padding: 3.5em 0;
+	}
 	h2 {
 		font-size: 2.2em !important;
 	}
@@ -96,15 +102,12 @@
 	}
 	#banner {
 		.content {
+			width: 100%;
 			h1 {
 				font-size: 2.5em;
 			}
-			h3 {
+			.subtitle {
 				font-size: 1.3em;
-			}
-			width: 100%;
-			h1, h3 {
-				text-align: center;
 			}
 		}
 	}

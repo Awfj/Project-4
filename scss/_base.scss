@@ -1,10 +1,6 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 }
-* {
-	margin: 0;
-	border: 0;
-}
 .wrapper {
 	width: 1196px;
 	max-width: 90%;
@@ -19,9 +15,6 @@ a, h2, h3 {
 a {
 	text-decoration: none;
 }
-h1, h2, h3, p {
-	margin: 0;
-}
 h2 {
 	text-align: center;
 	font-size: 2.5em;
@@ -31,10 +24,15 @@ h3 {
 	font-size: 1.45em;
 	font-weight: 400;
 }
-p {
-	color: $grey;
+#features, #differences, #signup {
+	p {
+		color: $grey;
+		font-weight: 400;
+		line-height: 1.5em;
+	}
 }
-#banner, #banner .wrapper, #features, #diffirences, input[type="text"] {
+#banner, #banner .wrapper, #features, 
+#differences, input[type="text"] {
 	background-repeat: no-repeat;
 }
 header, footer{
@@ -42,7 +40,12 @@ header, footer{
 		float: left;
 	}
 }
-
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid $dark_blue;
+}
 
 form {
 	input {

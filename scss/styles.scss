@@ -4,6 +4,7 @@
 
 header {
 	padding: 1.5em 0;
+	background-color: $white;
 	.menu {
 		display: none;
 	}
@@ -46,14 +47,15 @@ header {
 			margin: 0 0 .3em 0;
 			line-height: 1.3em;
 		}
-		h3 {
+		.subtitle {
 			font-weight: 300;
 			font-style: italic;
 			margin: 0 0 2em 0;
 			font-size: 1.5em;
 			color: $white;
 		}
-		p {
+		#for_free {
+			font-size: 1em;
 			font-weight: 500;
 			margin: 0 0 1.5em 0;
 			color: $white;
@@ -116,8 +118,6 @@ header {
 		}
 		p {
 			margin: .6em 0 0;
-			font-weight: 400;
-			line-height: 1.3em;
 		}
 	}
 }
@@ -149,8 +149,6 @@ header {
 			}
 			p {
 				margin: 1.5em 0 2em;
-				font-weight: 400;
-				line-height: 1.5em;
 			}
 		}
 		.fade {
@@ -194,7 +192,7 @@ header {
 		margin: 0 0 .5em;
 	}
 	p {
-		margin: 0 0 3em;
+		margin: 0 0 1.5em;
 		text-align: center;
 		font-weight: 300;
 		font-style: italic;

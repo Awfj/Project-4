@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
 	//HIDDEN MENU
 	$('.menu').click(function(i) {
 		i.stopPropagation();
@@ -7,8 +8,22 @@ $(document).ready(function() {
 	$(document).click(function() {
 		$('#main_nav').removeClass('active_menu');
 	});
-});
 
+  //STICKY NAV
+  var headerOffset = $('header').offset().top;
+  var featuresOffset = $('#features').offset().top;
+  var scrollPos = $(window).scrollTop();
+
+  $('header').wrap('<div class="nav-placeholder"></div>');
+  $("nav-placeholder").height($('header').outerHeight());
+  $(window).scroll(function() {
+    if (scrollPos >= headerOffset) {
+      $('header').addClass('fixed');  
+    } else {
+      $('header').removeClass('fixed');
+    }
+  });
+});
 
 //SLIDESHOW
 var slideIndex = 1;
