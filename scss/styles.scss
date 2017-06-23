@@ -3,6 +3,7 @@
 @import 'base';
 
 header {
+	z-index: 1;
 	padding: 1.5em 0;
 	background-color: $white;
 	.menu {
@@ -133,7 +134,6 @@ header {
 		margin: 0 0 1em;
 	}
 	.slideshow-container {
-		position: relative;
 		.mySlides {
 			width: 55%;
 			max-width: 100%;

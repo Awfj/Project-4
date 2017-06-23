@@ -10,19 +10,20 @@ $(document).ready(function() {
 	});
 
   //STICKY NAV
-  var headerOffset = $('header').offset().top;
-  var featuresOffset = $('#features').offset().top;
-  var scrollPos = $(window).scrollTop();
-
-  $('header').wrap('<div class="nav-placeholder"></div>');
-  $("nav-placeholder").height($('header').outerHeight());
-  $(window).scroll(function() {
+  $(window).scroll(sticky_nav());
+  sticky_nav();
+  function sticky_nav() {
+    var headerOffset = $('header').offset().top;
+    var featuresOffset = $('#features').offset().top;
+    var scrollPos = $(window).scrollTop();
+    $('header').wrap('<div class="nav-placeholder"></div>');
+    $(".nav-placeholder").height($('header').outerHeight());
     if (scrollPos >= headerOffset) {
       $('header').addClass('fixed');  
     } else {
       $('header').removeClass('fixed');
     }
-  });
+  }
 });
 
 //SLIDESHOW

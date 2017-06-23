@@ -105,6 +105,7 @@ form input::placeholder {
       color: #5fa3d2; }
 
 header {
+  z-index: 1;
   padding: 1.5em 0;
   background-color: #fff; }
   header .menu {
@@ -205,26 +206,24 @@ header {
   padding: 6em 0; }
   #differences h2 {
     margin: 0 0 1em; }
-  #differences .slideshow-container {
-    position: relative; }
-    #differences .slideshow-container .mySlides {
-      width: 55%;
-      max-width: 100%;
-      display: none; }
-      #differences .slideshow-container .mySlides img {
-        vertical-align: middle;
-        margin-right: 1em; }
-      #differences .slideshow-container .mySlides h3 {
-        vertical-align: middle;
-        display: inline-block;
-        margin: 0; }
-      #differences .slideshow-container .mySlides p {
-        margin: 1.5em 0 2em; }
-    #differences .slideshow-container .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s; }
+  #differences .slideshow-container .mySlides {
+    width: 55%;
+    max-width: 100%;
+    display: none; }
+    #differences .slideshow-container .mySlides img {
+      vertical-align: middle;
+      margin-right: 1em; }
+    #differences .slideshow-container .mySlides h3 {
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0; }
+    #differences .slideshow-container .mySlides p {
+      margin: 1.5em 0 2em; }
+  #differences .slideshow-container .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
 
 @-webkit-keyframes fade {
   from {
