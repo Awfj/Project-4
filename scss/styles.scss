@@ -27,7 +27,7 @@ header {
 
 #banner {
 	@include background(
-		url(../images/banner.png), 
+		url(../images/phone.png), 
 		550px,
 		right 10px);
 	background-color: $blue;
